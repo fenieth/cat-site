@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Мур — простой помощник по уходу за кошкой и сообщество котолюбов рядом.">
+  <title>Мур — забота о кошке каждый день</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav shell">
+    <a class="brand" href="#top" aria-label="Мур — на главную"><span class="brand-mark">м</span><span>мур</span></a>
+    <nav aria-label="Основная навигация">
+      <a href="#assistant">Помощник</a><a href="#friends">Друзья</a><a href="#care">Уход</a>
+    </nav>
+    <button class="btn btn-small open-register">Начать бесплатно</button>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <span class="eyebrow"><i></i> забота без паники</span>
+        <h1>Ваш кот не скажет.<br><em>А мы подскажем.</em></h1>
+        <p class="lead">Простые ответы по уходу, напоминания и люди с кошками рядом. Всё нужное — в одном уютном месте.</p>
+        <div class="hero-actions">
+          <button class="btn open-register">Создать профиль <span>→</span></button>
+          <a class="text-link" href="#assistant">Спросить помощника</a>
+        </div>
+        <div class="trust"><div class="avatars"><span>🐈</span><span>🐱</span><span>😺</span></div><p><b>4 800+</b> хозяев уже с нами</p></div>
+      </div>
+      <div class="hero-visual">
+        <img src="assets/hero-cat.png" alt="Рыжий кот отдыхает в уютном кресле">
+        <div class="floating-card card-health"><span class="icon-dot">✓</span><p><small>Сегодня</small><b>Кот счастлив и ухожен</b></p></div>
+        <div class="floating-card card-reminder"><span>💧</span><p><small>Напоминание</small><b>Обновить воду</b></p></div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Возможности"><div>Уход без сложностей <span>✦</span> Друзья рядом <span>✦</span> Забота каждый день <span>✦</span> Уход без сложностей <span>✦</span></div></section>
+
+    <section class="features shell" id="care">
+      <div class="section-heading"><span class="eyebrow"><i></i> всё самое важное</span><h2>Меньше тревоги.<br><em>Больше мурчания.</em></h2></div>
+      <div class="feature-grid">
+        <article class="feature blue" id="assistant">
+          <div class="feature-top"><span>01</span><span class="round-icon">✦</span></div>
+          <h3>Быстрый помощник</h3><p>Опишите ситуацию — получите понятный план действий за минуту.</p>
+          <button class="feature-link" data-action="assistant">Задать вопрос <b>↗</b></button>
+        </article>
+        <article class="feature coral" id="friends">
+          <div class="feature-top"><span>02</span><span class="round-icon">⌁</span></div>
+          <h3>Друзья с кошками</h3><p>Находите котолюбов рядом: для прогулок, советов и взаимопомощи.</p>
+          <button class="feature-link" data-action="friends">Найти своих <b>↗</b></button>
+        </article>
+        <article class="feature cream">
+          <div class="feature-top"><span>03</span><span class="round-icon">◷</span></div>
+          <h3>Забота по плану</h3><p>Кормление, вода, лекарства и визиты — напомним вовремя.</p>
+          <button class="feature-link" data-action="reminder">Добавить дело <b>↗</b></button>
+        </article>
+      </div>
+    </section>
+
+    <section class="join shell">
+      <div><span class="eyebrow light"><i></i> присоединяйтесь</span><h2>Заботиться проще,<br>когда вы не одни.</h2></div>
+      <button class="btn btn-light open-register">Создать профиль <span>→</span></button>
+      <div class="paw" aria-hidden="true">🐾</div>
+    </section>
+  </main>
+
+  <footer class="shell"><a class="brand" href="#top"><span class="brand-mark">м</span><span>мур</span></a><p>Сделано с заботой о тех, кто мурчит.</p><span>© 2026</span></footer>
+
+  <dialog id="register-modal">
+    <button class="modal-close" aria-label="Закрыть">×</button>
+    <span class="eyebrow"><i></i> займёт минуту</span>
+    <h2>Давайте знакомиться</h2><p>Только главное. Остальное можно добавить позже.</p>
+    <form id="register-form">
+      <label>Имя<input name="name" autocomplete="name" placeholder="Как вас зовут?" required></label>
+      <label>Email<input type="email" name="email" autocomplete="email" placeholder="you@example.com" required></label>
+      <label>Телефон<input type="tel" name="phone" autocomplete="tel" placeholder="+7 777 000-00-00" required></label>
+      <label>Город<input name="city" autocomplete="address-level2" placeholder="Например, Алматы" required></label>
+      <button class="btn" type="submit">Создать профиль <span>→</span></button>
+      <small>Нажимая кнопку, вы соглашаетесь с правилами сервиса.</small>
+    </form>
+    <div class="success" hidden><span>✓</span><h2>Добро пожаловать!</h2><p>Профиль создан. Теперь заботиться будет проще.</p><button class="btn success-close">Начать</button></div>
+  </dialog>
+
+  <dialog id="action-modal" class="action-modal">
+    <button class="modal-close" aria-label="Закрыть">×</button><div id="action-content"></div>
+  </dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
